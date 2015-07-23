@@ -19,8 +19,12 @@ public class MainApp {
       | casted to actual HelloWorld object. Once you have object, you can use this object 
       | to call any class method.
       */
-     HelloWorld hw = (HelloWorld) ac.getBean("helloWorld");
-     hw.getMessage();
+     HelloWorld hw1 = (HelloWorld) ac.getBean("helloWorld");
+     hw1.setMessage("I'm HelloWorld 1");
+     hw1.getMessage();
+     
+     HelloWorld hw2 = (HelloWorld) ac.getBean("helloWorld");
+     hw2.getMessage();
   }
 
 }
